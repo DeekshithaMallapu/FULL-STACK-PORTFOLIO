@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 id="title">🌱 Crop Problem Solver</h1>
+
+    <!-- Language -->
+    <select id="language" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="te">Telugu</option>
+        <option value="ta">Tamil</option>
+    </select>
+
+    <!-- Crop -->
+    <label>Select Crop:</label>
+    <select id="crop" onchange="showCropImage()">
+        <option value="rice">Rice</option>
+        <option value="cotton">Cotton</option>
+    </select>
+
+    <img id="cropImage" class="image">
+
+    <!-- Problem -->
+    <label>Select Problem:</label>
+    <select id="problem">
+        <option value="yellow leaves">Yellow Leaves</option>
+        <option value="brown spots">Brown Spots</option>
+        <option value="leaf curl">Leaf Curl</option>
+    </select>
+
+    <!-- Voice -->
+    <div class="voice-box">
+        <input type="text" id="voiceInput" placeholder="Speak your problem..." />
+        <button onclick="startVoice()">🎤</button>
+    </div>
+
+    <!-- Image Upload -->
+    <label>Upload Crop Image:</label>
+    <input type="file" accept="image/*" onchange="previewImage(event)">
+    <img id="preview" class="image">
+
+    <!-- Button -->
+    <button class="main-btn" onclick="getSolution()">Get Solution</button>
+
+    <!-- Result -->
+    <div id="result" class="result-box"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
