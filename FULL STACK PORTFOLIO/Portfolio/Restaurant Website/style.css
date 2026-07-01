@@ -18,35 +18,12 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 60px;
+    flex-wrap:wrap;
+    padding:20px 30px;
     background:#ff6b35;
-
     position:sticky;
     top:0;
     z-index:1000;
-}
-
-.logo{
-    color:white;
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-}
-
-.nav-links li{
-    margin-left:30px;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-}
-
-.nav-links a:hover{
-    color:yellow;
 }
 
 /* Hero */
@@ -461,66 +438,87 @@ footer p{
 
   /* ================= MOBILE RESPONSIVE ================= */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
     .navbar{
-        flex-direction: column;
-        padding: 15px;
+        flex-direction:column;
+        align-items:center;
     }
 
     .nav-links{
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 15px;
+        width:100%;
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+        margin-top:15px;
     }
 
     .nav-links li{
-        margin: 10px 0;
+        margin:0;
     }
 
     .hero{
-        height: auto;
-        padding: 80px 20px;
+        height:auto;
+        padding:80px 20px;
     }
 
     .hero h1{
-        font-size: 35px;
+        font-size:35px;
     }
 
     .hero p{
-        font-size: 18px;
-    }
-
-    .hero button{
-        width: 200px;
+        font-size:18px;
     }
 
     .about{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image,
-    .about-text{
-        width: 100%;
+        flex-direction:column;
     }
 
     .contact-container{
-        flex-direction: column;
+        flex-direction:column;
     }
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
 
-    .card,
-    .review-card{
-        width: 100%;
-    }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 
-    .gallery-container{
-        grid-template-columns: 1fr;
-    }
+  .logo {
+    margin-bottom: 10px;
+  }
 
-    img{
-        max-width: 100%;
-        height: auto;
-    }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 18px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
