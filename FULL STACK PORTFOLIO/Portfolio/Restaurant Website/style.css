@@ -448,25 +448,7 @@ footer p{
     margin:8px 0;
 
 }
-/* Responsive for Mobile */
-@media (max-width: 768px) {
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
 
   .hero p {
     font-size: 1rem;
@@ -477,8 +459,68 @@ footer p{
     width: 80%;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  /* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-links li{
+        margin: 10px 0;
+    }
+
+    .hero{
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero h1{
+        font-size: 35px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+    .hero button{
+        width: 200px;
+    }
+
+    .about{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image,
+    .about-text{
+        width: 100%;
+    }
+
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .card,
+    .review-card{
+        width: 100%;
+    }
+
+    .gallery-container{
+        grid-template-columns: 1fr;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
 }
